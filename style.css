@@ -1,0 +1,786 @@
+/* ------------------------General------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Upright&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0 10px;
+    background-color: rgba(211, 221, 220, 0.37);
+}
+
+h2 {
+    text-align: center;
+    color: rgba(233, 230, 220, 0.8);
+}
+
+
+/* ------------------------Header------------------------- */
+
+
+.menu {
+    width: 100%;
+}
+
+.header {
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(73, 173, 168);
+
+}
+
+.header img {
+    height: 30px;
+    margin-left: 5px;
+}
+
+.title h1 {
+    font-size: 20px;
+    color: rgb(5, 21, 26); 
+    margin-top: 10px;
+    font-family: 'Cormorant Upright', serif;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 38px;
+    background-color: rgba(60, 156, 153, 0.692);
+    padding:5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.burger:hover{
+
+    background-color: rgb(22, 189, 180);
+}
+
+.fa-bars {
+    margin: 2px;
+    height: 1.8px;
+    width: 100%;
+    background-color: rgba(235, 231, 231, 0.863); 
+}
+
+.fa-bars::before {
+    display: none;
+}
+
+.dropdown {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(5, 21, 26);
+    overflow: hidden;
+    transition: all .7s;
+    max-height: 0;
+    margin-bottom: 2px;
+}
+
+.dropdown img{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    height: 15px;
+    cursor: pointer;
+
+}
+
+.down {
+    max-height: 150px;
+}
+
+.arrow.gone {
+    display: block;
+}
+
+.dropdown a {
+    padding: 5px 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);  
+}
+
+.dropdown a:hover {
+    transform: scale(1.10);
+    color: rgb(73, 173, 168);
+    transition: all .1s;;
+}
+
+
+/* ------------------------Main------------------------- */
+
+
+#imgSlide {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+}
+
+
+.headAcceuil {
+    width: 100%;
+    height: 320px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conteneurLigne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteneurFiltre {
+    height: 100%;
+    display: flex;
+    z-index: 6;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteneurFiltre select {
+    font-size: 16px;
+    background-color: rgba(50, 50, 50, 0.8);
+    color: rgb(211, 209, 208);
+    padding: 5px;
+    cursor: pointer;
+  
+}
+
+.conteneurFiltre select option {
+    background-color: rgba(50, 50, 50, 1);
+    font-size: 15px; 
+    margin: 10px;
+}
+
+
+.grand {
+    display: none;
+}
+
+.boutonAcc {
+    margin: 5px ;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 10px;
+    border: none;
+    color: rgb(41, 41, 41);;
+    background-color: rgb(73, 173, 168);
+    
+}
+
+.boutonAcc:hover {
+    background-color: rgb(73, 173, 168);
+}
+
+#rappel{
+    color: rgb(247, 45, 38);
+    font-size: 14px;
+    background-color:  rgba(216, 216, 216, 0.938);
+    margin-top: 5px;
+    padding: 0 10px;
+}
+
+.phraseAcceuil h2{
+    color: rgb(41, 41, 41);
+    font-size: 16px;
+
+}
+
+.phraseAcceuil article {
+    color: rgb(41, 41, 41);;
+    display: flex;
+    font-size: 14px;
+    text-align: center;
+    margin: 2px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 1px 1px 2px rgba(173, 173, 172, 0.8);
+    text-align: justify;
+}
+
+
+/* ------------------------Page-résérvation------------------------- */
+
+
+h1.reservation {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+label[for=destination] {
+    margin-left: 15px;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: whitesmoke;
+}
+
+.destination {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.select {
+    width: 96%;
+    height: 40px;
+    margin: 10px;
+    margin-left: 18px;
+    ;
+    background-color: white;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.date section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 95%;
+    height: 70px;
+}
+
+input#start {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+input#return {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.voyageur {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    width: 96%;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+input#voyageur {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section.button {
+    display: flex;
+    width: 400px;
+    height: 40px;
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#po img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* -----------------------Page-contact------------------------- */
+
+
+.coordonnées {
+    display: flex;
+    justify-content: space-around;
+}
+
+​ section.coordonnées div {
+    margin-top: 10px;
+    background-color: #aaaaaa;
+    padding: 10px;
+}
+
+​ ​ form {
+    margin-top: 100px;
+    border: 1px gray solid;
+}
+
+#fields-container {
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+
+form h2 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px gray solid;
+}
+
+p {
+    font-size: 24px;
+}
+
+form input,
+form textarea {
+    display: block;
+    padding: 3px;
+    width: 100%;
+    margin: 8px 0px;
+    box-sizing: border-box;
+}
+
+form .button-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+}
+
+form button {
+    background-color: #aaaaaa;
+    border: 1px solid #444;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin: 0;
+}
+
+​ .nom {
+    display: flex;
+}
+
+​ .map {
+    display: flex;
+    justify-content: center;
+}
+
+.horaires {
+    text-align: center;
+}
+
+​ #phone {
+    display: flex;
+    justify-content: center;
+}
+
+.texte div {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* -----------------------Page-winterfell------------------------ */
+
+
+h2 {
+    text-align: center;
+}
+
+.titre {
+    text-align: center;
+}
+
+.text1 {
+    text-align: center;
+    padding: 0 40px;
+}
+
+.winter {
+    background-image: url("https://iphonesoft.fr/images/_082019/fond-ecran-dynamique-macos-wallpaper-club.jpg");
+}
+
+.image-fond {
+    background: no-repeat;
+    height: 100px;
+    background-image: url("https://vignette.wikia.nocookie.net/gameofthrones/images/1/1f/801_Winterfell_Overview.png/revision/latest?cb=20190415031728");
+    background-attachment: fixed;
+    flex-wrap: wrap;
+    margin: 0 50px 50px 50px;
+    padding: 50px;
+}
+
+.album {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    text-align: center;
+    justify-content: center;
+}
+
+.photo1 {
+    height: 400px;
+    padding-bottom: 10px;
+    width: 500px;
+    margin: 5px;
+    background: no-repeat;
+    background-image: url("https://www.lebonguide.com/bundles/website/images/category/large/montagne-ski-surf-ski-de-fond.jpg");
+    background-size: contain;
+    display: inline-block;
+}
+
+.photo2 {
+    height: 400px;
+    width: 500px;
+    margin: 5px;
+    background: no-repeat;
+    background-image: url("https://static.apidae-tourisme.com/filestore/objets-touristiques/images/63/76/937023.jpg");
+    background-size: contain;
+}
+
+.photo3 {
+    height: 400px;
+
+    width: 500px;
+    margin: 5px;
+    background: no-repeat;
+    background-image: url("https://www.rts.ch/2019/04/04/17/09/10342466.image");
+    background-size: contain;
+}
+
+.photo4 {
+    height: 400px;
+
+    width: 500px;
+    margin: 5px;
+    background: no-repeat;
+    background-image: url("https://i.ytimg.com/vi/ZgFvuLl-G7E/maxresdefault.jpg");
+    background-size: contain;
+}
+
+a:hover {
+    transform: scale(1.1);
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.1s;
+}
+
+
+/* -----------------------Page- port-royal------------------------ */
+
+
+.summer {
+    background-image: url("https://hdfondsdecran.com/image/201609/2213/rayon-orange-arriere-plan-flou.jpg");
+}
+
+.image-fond1 {
+    background: no-repeat;
+    height: 100px;
+    background-image: url("https://img.20mn.fr/W3Ps9vQDS6-pQWggu7rUvg/830x532_envie-evasion-partez-lieux-tournage-serie-game-of-thrones.jpg");
+    background-attachment: fixed;
+    flex-wrap: wrap;
+    margin: 0 50px 50px 50px;
+    padding: 50px;
+}
+
+.ph {
+    height: 400px;
+    padding-bottom: 10px;
+    width: 500px;
+    margin: 5px;
+    background: no-repeat;
+    background-size: 500px 300px;
+    display: inline-block;
+
+}
+
+.ph1 {
+    background-image: url("https://www.jackiecuisine.com/wp-content/uploads/2020/02/hypogras-3w.jpg");
+
+}
+
+.ph2 {
+    background-image: url("https://m.oxybol.fr/scripts/files/587d42893b3159.41172983/balade-cheval-oxybol.jpg");
+
+}
+
+.ph3 {
+
+    background-image: url("https://cdn02.visitbarcelona.com/files/5531-5624-imagenCAT/BarcelonaJetSki.T24c.jpg");
+
+}
+
+.ph4 {
+    background-image: url("https://previews.123rf.com/images/famveldman/famveldman1704/famveldman170400557/76535128-enfant-jouant-dans-le-champ-de-marguerite-fille-cueillir-des-fleurs-fra%C3%AEches-dans-des-marguerites-prai.jpg");
+
+}
+
+
+/* -----------------------Footer------------------------- */
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(5, 21, 26);
+    height: 300px; 
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul a{
+    font-size: 16px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;  
+}
+
+/* -------------------@media screen--------------------------- */
+
+
+@media screen and (min-width: 740px) {
+
+    /*acceuil*/
+    #imgSlide {
+        width: 100%;
+        height: 550px;
+    }
+
+    .headAcceuil {
+        height: 700px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .conteneurFiltre select {
+        width: 400px;
+    }
+
+    .conteneurFiltre {
+        flex-direction: row;
+    }
+
+    .boutonAcc {
+        margin-left: 75px;
+    }
+
+    .carte {
+        display: flex;
+        justify-content: center;
+    }
+
+    .carte iframe {
+        max-width: 800px;
+    }
+
+    .phraseAcceuil article {
+        font-size: 30px;
+    }
+
+    .petit {
+        display: none;
+    }
+
+    .grand {
+        display: inline;
+    }
+
+    /*contact*/
+    .coordonnées {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .titreAcceuil {
+        font-size: 35px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    section.coordonnées div {
+        margin-top: 10px;
+    }
+
+
+    form {
+        margin-top: 100px;
+    }
+
+    #fields-container {
+        width: 80%;
+        margin: auto;
+    }
+
+    form h2 {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    form input,
+    form textarea {
+        display: block;
+        padding: 3px;
+        width: 100%;
+        margin: 8px 0px;
+        box-sizing: border-box;
+    }
+
+    form .button-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+
+    form button {
+        background-color: #aaaaaa;
+        border: 1px solid #444;
+        padding: 8px 15px;
+        border-radius: 3px;
+        margin: 0;
+    }
+
+    .nom {
+        display: flex;
+    }
+
+    .carte-info {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .info {
+        width: 60%;
+    }
+
+    body {
+        margin: 0 50px;
+    }
+
+    .header {
+        padding: 20px 50px 0 50px;
+    }
+
+    .header img {
+        height: 35px;
+    }
+
+    .title h1 {
+        font-size: 24px;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .dropdown {
+        justify-content: flex-end;
+        flex-direction: row;
+        height: 45px;
+        max-height: none;
+        position: sticky;
+        top: 0;
+        overflow: visible;
+        margin-bottom: 5px;
+        z-index: 10;
+    }
+
+    .dropdown a {
+        margin: 0 40px;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    /* ================ Footer ================== */
+
+
+
+    /* ======================================= */
+
+    .headAcceuil {
+        height: 700px;
+    }
+
+    .conteneurFiltre select {
+        width: 400px;
+    }
+
+    .conteneurFiltre {
+        flex-direction: row;
+    }
+
+    .boutonAcc {
+        margin-left: 75px;
+    }
+
+    .carte {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    section.button {
+        display: flex;
+        width: 400px;
+        height: 40px;
+        margin: 20px;
+        justify-content: center;
+        text-align: center;
+        background-color: whitesmoke;
+    }
+
+    /* page-reservation */
+
+    .destination {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    ​
+    /* page-reservation */
+
+    .image-fond {
+        background: no-repeat;
+        height: 380px;
+        background-image: url("https://vignette.wikia.nocookie.net/gameofthrones/images/1/1f/801_Winterfell_Overview.png/revision/latest?cb=20190415031728");
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    .album {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.image-fond1 {
+    background: no-repeat;
+    height: 380px;
+    background-image: url("https://vignette.wikia.nocookie.net/game-of-thrones-le-trone-de-fer/images/7/71/Port-R%C3%A9al_vu_depuis_la_tour_de_la_main_%282x01%29.jpg/revision/latest?cb=20170716182940&path-prefix=fr");
+    background-attachment: fixed;
+    background-position: center;
+}
